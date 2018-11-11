@@ -23,7 +23,7 @@ if (!localStorage.getItem('checkbox')) {
 	message.firstChild.innerHTML = notificationMessage[0][0]; //добавление текста нотификации
 	message.lastChild.innerHTML = notificationMessage[0][1];
 
-	closingButton.addEventListener('click', e => closeNotification(e)); //при нажатии на кнопку закрытия
+	closingButton.addEventListener('click', closeNotification); //при нажатии на кнопку закрытия
 	function closeNotification() {
 		notification.setAttribute('hidden', 'true');
 		if (checkbox.checked === true) {
@@ -41,9 +41,10 @@ if (!localStorage.getItem('checkbox')) {
 		message.lastChild.innerHTML = notificationMessage[num][1];
 	}
 
-	nextButton.addEventListener('click', e => slideNext()); //перемещение по стрелкам
-	prevButton.addEventListener('click', e => slidePrev());
+	nextButton.addEventListener('click', slideNext);//перемещение по стрелкам
+	prevButton.addEventListener('click', slidePrev);
 	function slideNext() {
+		
 		let currentSlideNum = document.querySelector('.info-slides-nav a.current').getAttribute("data-slide");
 		+currentSlideNum === 5 ? nextSlideNum = 0 : nextSlideNum = +currentSlideNum + 1;
 		links[nextSlideNum].classList.add('current');
@@ -59,4 +60,25 @@ if (!localStorage.getItem('checkbox')) {
 		message.firstChild.innerHTML = notificationMessage[prevSlideNum][0];
 		message.lastChild.innerHTML = notificationMessage[prevSlideNum][1];
 	}
+
+	addEventListener('keydown', slideNextKey); //перемещение с клавиатуры 
+	addEventListener('keydown', slidePrevKey);
+	function slideNextKey() {
+		if (event.keyCode == 39) {
+			slideNext();
+		}
+	}
+	function slidePrevKey() {
+		if (event.keyCode == 37) {
+			slidePrev();
+		}
+	}
+
+	addEventListener('keydown', closeNotificationKey); //закрытие при нажатии Esc
+	function closeNotificationKey() {
+		if (event.keyCode == 27) {
+			closeNotification();
+		}
+	}
+
 }
