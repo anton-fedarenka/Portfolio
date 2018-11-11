@@ -46,17 +46,13 @@ input, label {
 	vertical-align: middle;
 }
 
-label {
-	color: darkgrey;
-}
-
 .info-slides-nav {
 	position: absolute;
 	bottom: 10px;
 	right: 15px;
 }
 
-.info-slides-nav a:not(.controls) {
+.info-slides-nav .slide-nav {
 	width: 8px;
     height: 8px;
     text-decoration: none;
@@ -64,4 +60,8 @@ label {
     border-radius: 50%;
     margin: 0 2px 2px 2px;
     background-color: silver;
+}
+
+.info-slides-nav .current {
+	background-color: #00bfff;
 }
