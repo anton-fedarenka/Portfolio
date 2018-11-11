@@ -6,9 +6,9 @@
 		<link rel="stylesheet" type="text/css" href="notifications/style.css">
 	</head>
 	<body>
-		<div class="notification"> <!--hidden="true"-->
-			<a href="#" class="icon-close"><i class="fa fa-times"></i></a>
-			<div class="info-slides">какой-то текст из инициализированного массива</div>
+		<div id="notification" hidden="true"> <!--hidden="true"-->
+			<a href="#" id="icon-close"><i class="fa fa-times"></i></a>
+			<div id="info-slides"><p class="tip tip-name"></p><p class="tip"></p></div>
 			<div class="checkbox">
 			    <input type="checkbox" id="disable" name="disable-tips">
 			    <label for="disable">Disable Tips</label>
@@ -48,6 +48,8 @@
 		<p>In lacinia facilisis tortor ut commodo. Duis felis nisi, mattis et iaculis malesuada, lobortis eget ligula. In vehicula turpis et pellentesque ullamcorper. Fusce scelerisque, justo dictum placerat lacinia, diam lacus ultricies elit, eu egestas purus purus ullamcorper neque. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Mauris iaculis euismod neque ac fermentum. Phasellus ultricies, ante eget consequat vulputate, enim nulla pulvinar diam, eget efficitur urna metus vitae risus.</p>
 		
 		<p>Sed posuere nunc sit amet lorem ornare interdum. Mauris bibendum bibendum ornare. Vivamus fringilla interdum nisl, eget volutpat felis laoreet nec. Nam sit amet convallis sem. Etiam faucibus ultricies euismod. Aliquam nisl felis, suscipit vitae lectus in, lacinia fermentum risus. Sed pellentesque laoreet placerat. Nulla eu tincidunt lorem. Cras tristique, mi ut tristique maximus, orci diam lobortis arcu, vitae mollis nisi libero vel libero. Maecenas imperdiet ipsum venenatis, commodo dui a, euismod enim. Mauris et consequat sem, et suscipit turpis. Suspendisse consectetur tristique tristique. Sed ornare mi in neque viverra, nec vulputate mauris tempor.</p>
+
+		<script  src="notifications/notification.js"></script>
 	</body>
 
 </html>

@@ -1,27 +1,37 @@
 @import url("https://netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css");
 
-.notification {
+#notification {
 	position: fixed;
 	right: 20px;
 	top: 20px;
 	width: 300px;
-	height: 150px;
+	height: 180px;
 	box-shadow: 0 0 10px rgba(0,0,0,0.5);
 	background-color: white;
 }
 
-.info-slides {
+#info-slides {
 	margin: 5px;
 	padding: 5px;
 	width: 250px;
 	border: 2px solid black;
 }
 
+.tip {
+	margin: 0;
+}
+
+.tip-name {
+	text-transform: uppercase;
+	font-weight: bold;
+	padding: 5px 0;
+}
+
 .fa {
 	color: silver;
 }
 
-.icon-close {
+#icon-close {
 	padding: 7px;
 	float: right;
 }
