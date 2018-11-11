@@ -20,8 +20,11 @@ if (!localStorage.getItem('checkbox')) {
 		notification.removeAttribute('hidden');
 	}
 
-	message.firstChild.innerHTML = notificationMessage[0][0]; //добавление текста нотификации
-	message.lastChild.innerHTML = notificationMessage[0][1];
+	function setMessage(num) { //загрузка текстового message
+		message.firstChild.innerHTML = notificationMessage[num][0];
+		message.lastChild.innerHTML = notificationMessage[num][1];
+	}
+	setMessage(0);
 
 	closingButton.addEventListener('click', closeNotification); //при нажатии на кнопку закрытия
 	function closeNotification() {
@@ -37,48 +40,36 @@ if (!localStorage.getItem('checkbox')) {
 	function showMessage(num) {
 		[].forEach.call(links, item => item.classList.remove('current'));
 		links[num].classList.add('current');
-		message.firstChild.innerHTML = notificationMessage[num][0];
-		message.lastChild.innerHTML = notificationMessage[num][1];
+		setMessage(num);
 	}
 
-	nextButton.addEventListener('click', slideNext);//перемещение по стрелкам
-	prevButton.addEventListener('click', slidePrev);
-	function slideNext() {
-		
+	nextButton.addEventListener('click', e => toSlide('next'));//перемещение по стрелкам
+	prevButton.addEventListener('click', e => toSlide('prev'));
+	function toSlide(side) {
 		let currentSlideNum = document.querySelector('.info-slides-nav a.current').getAttribute("data-slide");
-		+currentSlideNum === 5 ? nextSlideNum = 0 : nextSlideNum = +currentSlideNum + 1;
+		let nextSlideNum = null;
+		if (side === 'next') {
+			+currentSlideNum === 5 ? nextSlideNum = 0 : nextSlideNum = +currentSlideNum + 1;
+		} else {
+			+currentSlideNum === 0 ? nextSlideNum = 5 : nextSlideNum = currentSlideNum - 1;
+		}
 		links[nextSlideNum].classList.add('current');
 		links[currentSlideNum].classList.remove('current');
-		message.firstChild.innerHTML = notificationMessage[nextSlideNum][0];
-		message.lastChild.innerHTML = notificationMessage[nextSlideNum][1];
-	}
-	function slidePrev() {
-		let currentSlideNum = document.querySelector('.info-slides-nav a.current').getAttribute("data-slide");
-		+currentSlideNum === 0 ? prevSlideNum = 5 : prevSlideNum = currentSlideNum - 1;
-		links[prevSlideNum].classList.add('current');
-		links[currentSlideNum].classList.remove('current');
-		message.firstChild.innerHTML = notificationMessage[prevSlideNum][0];
-		message.lastChild.innerHTML = notificationMessage[prevSlideNum][1];
+		setMessage(nextSlideNum);
 	}
 
-	addEventListener('keydown', slideNextKey); //перемещение с клавиатуры 
-	addEventListener('keydown', slidePrevKey);
-	function slideNextKey() {
-		if (event.keyCode == 39) {
-			slideNext();
-		}
+	addEventListener('keydown', toSlideKey); //действия с клавиатуры
+	function toSlideKey() {
+		switch(event.keyCode) {
+	  		case 39:
+	  			toSlide('next');
+	  			break;
+	  		case 37:
+	  			toSlide('prev');
+	  			break;
+	  		case 27:
+	  			closeNotification();
+	  			break;
+	  	}
 	}
-	function slidePrevKey() {
-		if (event.keyCode == 37) {
-			slidePrev();
-		}
-	}
-
-	addEventListener('keydown', closeNotificationKey); //закрытие при нажатии Esc
-	function closeNotificationKey() {
-		if (event.keyCode == 27) {
-			closeNotification();
-		}
-	}
-
 }
