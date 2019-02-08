@@ -1,0 +1,102 @@
+@import url("https://netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css");
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: white;/*rgb(254, 253, 170);*/
+    font-family: Arial, sans-serif;
+}
+
+.container {
+  width: 100%;
+}
+
+.currency-table {
+  margin: 20px auto 0 auto;
+  border-collapse: collapse;
+  text-align: center;
+}
+
+.currency-table th {
+  font-size: 18px;
+  border-bottom: 2px solid green;
+  border-right: 2px dashed green;
+  width: 220px;
+  background-color: rgba(56, 227, 15, 0.6);/*rgb(254, 253, 170);*/
+}
+
+.currency-table th:last-child {
+  border-right: none;
+}
+
+.currency-table-row:nth-child(2n-1) {
+  background-color: rgba(158, 201, 252, 0.3);
+}
+
+.currency-table-row td {
+  padding: 10px 0;
+}
+
+.currency-table-row td:first-child {
+  text-align: left;
+  padding-left: 25px;
+}
+
+.currency-choice {
+  width: 26%;
+  float: left;
+  border: 2px solid green;
+  border-radius: 10px;
+  margin: 50px auto auto 50px;
+  padding: 10px;
+}
+
+.checkbox-container {
+  margin: 10px 0 10px 0;
+}
+
+span {
+  padding-left: 10px;
+}
+
+.date-input {
+  outline:none;
+  margin: 15px auto 0 auto;
+  text-align: center;
+  border-radius: 5px;
+  border: 2px solid yellow;
+}
+
+.date-input:active, .date-input:hover {
+  border-radius: 5px;
+  border: 2px solid blue;
+}
+
+.button-container {
+  margin: 15px auto 0 auto;
+  text-align: center;
+}
+
+.button {
+  outline:none;
+  width: 150px;
+  height: 30px;
+  border-radius: 5px;
+  background-color: rgba(41, 158, 23, 0.9);
+  border: none;
+}
+
+.button:hover {
+  background-color: rgb(41, 158, 23);
+}
+
+.button:active {
+  background-color: green;
+}
+
+canvas {
+  border: 2px solid green;
+  float: right;
+  margin: 50px 50px 50px auto;
+  border-radius: 10px;
+}

@@ -1,0 +1,19 @@
+{
+  "name": "currencyrate",
+  "version": "1.0.0",
+  "description": "",
+  "main": "currencyApp.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Hentmire/CurrencyRate.git"
+  },
+  "author": "Hentmire",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Hentmire/CurrencyRate/issues"
+  },
+  "homepage": "https://github.com/Hentmire/CurrencyRate#readme"
+}
