@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        <meta charset="utf-8" />
+        <title>Currency</title>
+        <link rel="stylesheet" href="currencyApp.css"/>
+        <script src="currencyApp.js" defer></script>
+    </head>
+    <body>
+        <section class="container">
+          <table class="currency-table">
+            <tr>
+              <th>Наименование иностранной валюты</th>
+              <th>Количество единиц иностранной валюты, буквенный код валюты</th>
+              <th>Официальный обменный курс относительно BYN</th>
+            </tr>
+          </table>
+        </section>
+        <section>
+          <div class="currency-choice">
+            <span>Для построения графика изменения курса выберите одну или несколько валют:</span>
+            <div class="checkbox-container">
+              <input class="checkbox" type="checkbox" id="USD" value="145" checked/>
+              <label for="USD">Доллар США (USD)</label>
+            </div>
+            <div class="checkbox-container">
+              <input class="checkbox" type="checkbox" id="EUR" value="292"/>
+              <label for="EUR">Евро (EUR)</label>
+            </div>
+            <div class="checkbox-container">
+              <input class="checkbox" type="checkbox" id="RUB" value="298"/>
+              <label for="RUB">Российский рубль (RUB)</label>
+            </div>
+            <span>За период в 2018 году:</span>
+            <form>
+              <span>с</span>
+              <input class="date-input first-date" type="text" pattern="(0[1-9]|1[0-9]|2[0-9]|3[01])-(0[1-9]|1[012])" placeholder="ДД-ММ"/>
+              <span>по</span>
+              <input class="date-input second-date" type="text" pattern="(0[1-9]|1[0-9]|2[0-9]|3[01])-(0[1-9]|1[012])" placeholder="ДД-ММ"/>
+              <div class="button-container">
+                <button type="submit" class="button" id="btn">Построить график</button>
+              </div>
+            </form>
+          </div>
+          <canvas id="canvas" width="900" height="550">График изменения курса валют</canvas>
+        </section>
+    </body>
+</html>
