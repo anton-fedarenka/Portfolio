@@ -1,0 +1,76 @@
+.person-works__slider {
+    max-width: 700px;
+    height: 377px;
+    position: relative;
+    margin-top: 20px;
+}
+
+.person-works__slider > input {
+    display: none;
+}
+
+.person-works__slider > input + label {
+    width: 6px;
+    height: 6px;
+    .border-radius(50%);
+    background-color: @color-greyBlue;
+    border: 1px solid @color-greyBlue;
+    cursor: pointer;
+    position: relative;
+    margin-left: 8px;
+    top: 405px;
+    float: right;
+    transition: background 0.8s ease-out 0s;
+}
+
+.person-works__slider > input + label:hover {
+    background-color: @color-white;
+    border: 1px solid @color-white;
+}
+
+.person-works__slider > input:checked + label {
+    background-color: @color-bgGrey;
+}
+
+.person-works__slider > div {
+    position: absolute;
+    top: 0;
+    left: 0;
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity 0.6s ease-out 0.1s, visibility 0.1s ease-out 0.7s;
+}
+
+.person-works__slider > div > img {
+    width: 700px;
+    height: 377px;
+    .border-radius(8px);
+}
+
+.person-works__slider > input:checked + label + div {
+    visibility: visible;
+    opacity: 1;
+    transition: opacity 0.6s ease-out 0.1s, visibility 0.1s ease-out 0s;
+}
+
+.person-works__slider > div > p {
+    position: absolute;
+    top: 397px;
+    .sans-font(14px, @color-white, 20px);
+    text-align: left;
+    float: left;
+    max-width: 520px; 
+}
+
+.person-works__slider > input + label + div + label {
+    width: 700px;
+    height: 377px;
+    .border-radius(8px);
+    cursor: pointer;
+    z-index: 100;
+    position: relative;
+}
+
+.person-works__slider > input:checked + label + div + label {
+    position: absolute;
+}

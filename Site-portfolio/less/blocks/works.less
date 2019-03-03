@@ -1,0 +1,34 @@
+.person-works {
+    width: 100%;
+    background-color: @color-bgGrey;
+    padding: 100px 0;
+    text-align: center;
+
+    h2 {
+        .bold-font(32px, @color-white, 36px);
+        padding-bottom: 8px;
+    }
+    span {
+        .mono-font(14px, @color-white, 20px);
+        opacity: 0.7;
+    }
+}
+
+.person-works_site {
+    margin-top: 140px;
+    
+    h3 {
+        .bold-font(18px, @color-white, 24px);
+    }
+    a {
+        text-decoration: none;
+        .mono-font(14px, @color-greyBlue, 20px);
+    }
+    a:hover {
+        color: @color-white;
+    }
+    a:active {
+        color: @color-greyBlue;
+        opacity: 0.7;
+    }
+}

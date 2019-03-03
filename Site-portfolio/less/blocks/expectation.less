@@ -1,0 +1,53 @@
+.person-expectation {
+    width: 100%;
+    padding: 100px 0 115px 0;
+
+    h2 {
+        .bold-font(32px, @color-black, 36px);
+        padding-bottom: 16px;
+        border-bottom: 1px solid @color-borderGrey;
+    }
+    a {
+        .bold-font(18px, @color-blue, 24px);
+        display: block;
+        text-decoration: none;
+        padding: 14px 0;
+        border-bottom: 1px solid @color-borderGrey;
+        transition: 0.3s;
+    }
+    a:after {
+        content: '\f067';
+        font-family: FontAwesome;
+        color: @color-blue;
+        width: 16px;
+        height: 16px;
+        float: right;
+    }
+    a:hover,
+    a:hover:after {
+        color: @color-black;
+    }
+    a:focus, 
+    a:active {
+        outline: none;
+        padding-bottom: 12px;
+        border: none;
+        color: @color-black;
+    }
+    a:focus:after, 
+    a:active:after {
+        transform: rotate(45deg);
+        color: @color-black;
+    }
+    p {
+        .mono-font(14px, @color-black, 20px);
+        padding-bottom: 20px;
+        border-bottom: 1px solid @color-borderGrey;
+        display: none;
+    }
+    a:focus + p, 
+    a:active + p, 
+    p:hover {
+        display: block;
+    }
+}

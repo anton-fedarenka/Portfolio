@@ -1,0 +1,58 @@
+.person-contacts {
+    width: 100%;
+    background-color: @color-bgLightGrey;
+    padding: 100px 0;
+    text-align: center;
+
+    h2 {
+        .bold-font(32px, @color-black, 36px);
+    }
+    p {
+        .mono-font(14px, @color-black, 20px);
+    }
+}
+
+.person-contacts__soc-net {
+    margin: 16px 0 20px 0;
+    display: flex;
+    justify-content: center;
+
+    a {
+        text-decoration: none;
+        color: @color-white;
+        display: block;
+        width: 48px;
+        height: 48px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-right: 16px;
+        .border-radius(50%);
+
+        i {
+            font-size: 25px;
+            font-family: fontawesome;
+        }
+    }
+    .vk {
+        background-color: @color-blueVk;
+        opacity: 0.9;
+    }
+    .tw {
+        background-color: @color-blueTw;
+        opacity: 0.85;
+    }
+    .skype {
+        background-color: @color-blueSkype;
+        opacity: 0.85;
+    }
+    .vk, .tw, .skype {
+        transition: 0.3s;
+    }
+    .vk:hover, .tw:hover, .skype:hover {
+        opacity: 1;
+    }
+    .vk:active, .tw:active, .skype:active {
+        opacity: 0.7;
+    }
+}
