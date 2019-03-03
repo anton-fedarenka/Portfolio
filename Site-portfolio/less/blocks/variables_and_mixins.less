@@ -1,0 +1,38 @@
+/*Colors*/
+@color-bgLightGrey: #EFF1F2;
+@color-bgGrey: #25282A;
+@color-blue: #0059D9;
+@color-white: #FFF;
+@color-black: #000;
+@color-borderGrey: #D2D9E2; 
+@color-greyBlue: #71ABFF;
+@color-blueTw: #51ADEF;
+@color-blueVk: #395A99;
+@color-blueSkype: #2CA5E0;
+
+/*Mixins for fonts*/
+.bold-font(@fontSize, @color, @height) {
+    font-family: 'Montserrat', Arial, sans-serif;
+    font-size: @fontSize;
+    color: @color;
+    line-height: @height;
+}
+.mono-font(@fontSize, @color, @height) {
+    font-family: 'PT Mono', Arial, sans-serif;
+    font-size: @fontSize;
+    color: @color;
+    line-height: @height;
+}
+.sans-font(@fontSize, @color, @height) {
+    font-family: 'PT Sans', Arial, sans-serif;
+    font-size: @fontSize;
+    color: @color;
+    line-height: @height;
+}
+
+/*Mixin for border-radius*/
+.border-radius(@radius) {
+    -webkit-border-radius: @radius;
+    -moz-border-radius: @radius;
+    border-radius: @radius;
+}
