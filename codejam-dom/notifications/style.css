@@ -10,6 +10,10 @@
 	background-color: white;
 }
 
+.hidden {
+	display: none;
+}
+
 #info-slides {
 	margin: 5px;
 	padding: 5px;
@@ -58,10 +62,14 @@ input, label {
     text-decoration: none;
     display: inline-block;
     border-radius: 50%;
-    margin: 0 2px 2px 2px;
+	margin: 0 2px 1px;
     background-color: silver;
 }
 
 .info-slides-nav .current {
 	background-color: #00bfff;
+}
+
+#slides-nav {
+	display: inline-block;
 }

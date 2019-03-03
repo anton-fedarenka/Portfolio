@@ -4,23 +4,26 @@
 		<meta charset="utf-8">
 		<title>Codejam-DOM</title>
 		<link rel="stylesheet" type="text/css" href="notifications/style.css">
+		<script src="notifications/notification.js" async defer></script>
 	</head>
 	<body>
-		<div id="notification" hidden="true">
+		<div id="notification" class="hidden">
 			<a href="#" id="icon-close"><i class="fa fa-times"></i></a>
 			<div id="info-slides"><p class="tip tip-name"></p><p class="tip"></p></div>
 			<div class="checkbox">
 			    <input type="checkbox" id="disable-messages" name="disable-messages">
-			    <label for="disable">Disable Tips</label>
+			    <label for="disable-messages">Disable Tips</label>
 			</div>
-			<div class="info-slides-nav">
+			<div class="info-slides-nav" id="info-slides-nav">
 				<a href="#" class="controls" id="prev"><i class="fa fa-chevron-circle-left"></i></a>
-				<a class="current slide-nav" href="#" data-slide="0"></a>
-	        	<a class="slide-nav" href="#" data-slide="1"></a>
-	        	<a class="slide-nav" href="#" data-slide="2"></a>
-	        	<a class="slide-nav" href="#" data-slide="3"></a>
-	        	<a class="slide-nav" href="#" data-slide="4"></a>
-	        	<a class="slide-nav" href="#" data-slide="5"></a>
+				<div id="slides-nav">
+					<a class="current slide-nav" href="#" data-slide="0"></a>
+					<a class="slide-nav" href="#" data-slide="1"></a>
+					<a class="slide-nav" href="#" data-slide="2"></a>
+					<a class="slide-nav" href="#" data-slide="3"></a>
+					<a class="slide-nav" href="#" data-slide="4"></a>
+					<a class="slide-nav" href="#" data-slide="5"></a>
+				</div>
         		<a href="#" class="controls" id="next"><i class="fa fa-chevron-circle-right"></i></a>
         	</div>
 		</div>
@@ -49,7 +52,6 @@
 		
 		<p>Sed posuere nunc sit amet lorem ornare interdum. Mauris bibendum bibendum ornare. Vivamus fringilla interdum nisl, eget volutpat felis laoreet nec. Nam sit amet convallis sem. Etiam faucibus ultricies euismod. Aliquam nisl felis, suscipit vitae lectus in, lacinia fermentum risus. Sed pellentesque laoreet placerat. Nulla eu tincidunt lorem. Cras tristique, mi ut tristique maximus, orci diam lobortis arcu, vitae mollis nisi libero vel libero. Maecenas imperdiet ipsum venenatis, commodo dui a, euismod enim. Mauris et consequat sem, et suscipit turpis. Suspendisse consectetur tristique tristique. Sed ornare mi in neque viverra, nec vulputate mauris tempor.</p>
 
-		<script  src="notifications/notification.js"></script>
 	</body>
 
 </html>
