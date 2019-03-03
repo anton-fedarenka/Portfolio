@@ -1,0 +1,15 @@
+{
+  "name": "codejam-dom",
+  "version": "1.0.0",
+  "description": "rsschool-codejam",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "\u0016https://github.com/rolling-scopes-school/hentmire-2018Q3/tree/codejam-dom/codejam-dom"
+  },
+  "author": "Viktoria Udodova",
+  "license": "ISC"
+}
