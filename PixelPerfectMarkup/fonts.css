@@ -1,0 +1,47 @@
+@font-face {
+  font-family: Lato-Medium;
+  src: url(fonts/Lato-Medium.ttf);
+}
+
+@font-face {
+	font-family: Lato-Thin;
+	src: url(fonts/Lato-Thin.ttf);
+}
+
+@font-face {
+	font-family: Lato-Light;
+	src: url(fonts/Lato-Light.ttf);
+}
+
+@font-face {
+  font-family: Lato-Regular;
+  src: url(fonts/Lato-Regular.ttf);
+}
+
+@font-face {
+	font-family: Lato-Semibold;
+	src: url(fonts/Lato-Semibold.ttf);
+}
+
+@font-face {
+	font-family: Lato-Bold;
+	src: url(fonts/Lato-Bold.ttf);
+}
+
+@font-face {
+	font-family: Lato-Heavy;
+	src: url(fonts/Lato-Heavy.ttf);
+}
+
+@font-face {
+	font-family: Lato-Black;
+	src: url(fonts/Lato-Black.ttf);
+}
+
+@font-face {
+font-family: 'Montserrat Ultra Light';
+font-style: normal;
+font-weight: normal;
+src: local('Montserrat Ultra Light'), url('Montserrat-UltraLight.woff') format('woff');
+}
+
